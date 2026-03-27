@@ -159,7 +159,7 @@ const HeroPortfolio: React.FC<HeroPortfolioProps> = ({ onOpenModal }) => {
         <div style={{ textAlign: "center", marginTop: "1.5rem", opacity: 0, animation: "cardReveal 0.6s ease-out 0.9s forwards" }}>
           <button
             className="hero-cta-btn"
-            onClick={onOpenModal}
+            onClick={() => onOpenModal()}
             style={{
               padding: "0.7rem 2rem",
               background: "transparent",

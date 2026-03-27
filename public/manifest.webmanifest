@@ -1,0 +1,20 @@
+{
+  "name": "JAXA Production",
+  "short_name": "JAXA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030712",
+  "theme_color": "#2dd4e0",
+  "icons": [
+    {
+      "src": "/jaxa-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/jaxa-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

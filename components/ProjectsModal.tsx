@@ -293,7 +293,6 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, scrollTo
                     flexShrink: 0,
                     position: "relative",
                     overflow: "hidden",
-                    background: "#000",
                   }}
                 >
                   <img
@@ -301,12 +300,12 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, scrollTo
                     alt={t(project.nameKey)}
                     style={{
                       position: "absolute",
-                      top: "-8px",
-                      left: "-8px",
-                      width: "calc(100% + 16px)",
-                      height: "calc(100% + 16px)",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
                       objectFit: "cover",
-                      objectPosition: "center top",
+                      objectPosition: "center center",
                     }}
                   />
                 </div>
@@ -494,16 +493,24 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, scrollTo
             }
             .modal-content {
               padding: 1rem 1rem 4rem !important;
-              gap: 2rem !important;
+              gap: 2.5rem !important;
             }
             .catalogue-card {
               flex-direction: column !important;
+              border: none !important;
+              background: transparent !important;
             }
             .card-poster-wrap {
-              width: 100% !important;
+              width: 80% !important;
+              margin: 0 auto !important;
               min-height: 0 !important;
-              aspect-ratio: 2 / 3 !important;
-              max-height: 50vh !important;
+              aspect-ratio: unset !important;
+              max-height: none !important;
+            }
+            .card-poster-wrap img {
+              position: relative !important;
+              width: 100% !important;
+              height: auto !important;
             }
             .card-details {
               padding: 1.2rem !important;

@@ -113,8 +113,8 @@ const Pillars: React.FC = () => {
             }}
           >
             <img
-              src="/jaxa-icon.png"
-              alt="JAXA Production"
+              src="/studio-micho-icon.png"
+              alt="Studio Micho"
               style={{
                 width: "48px",
                 height: "48px",

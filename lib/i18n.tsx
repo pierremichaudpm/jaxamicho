@@ -117,7 +117,7 @@ const translations: Record<Locale, Record<string, string>> = {
     // Pitch
     "pitch.prefix": "Nos",
     "pitch.highlight": "expériences touchent, inspirent et rassemblent.",
-    "pitch.cta": "On en jase?",
+    "pitch.cta": "On en parle?",
     "pitch.subcta": "Dites-nous votre projet, on le rend réel.",
     "pitch.footer": "JAXA Production · Montréal",
     "pitch.virginie.role": "Production · Direction de projets",

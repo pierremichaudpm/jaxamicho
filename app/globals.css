@@ -224,8 +224,10 @@ section {
 
 @media (max-width: 580px) {
     .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        max-width: 95%;
+        margin: 0 auto;
     }
 }
 

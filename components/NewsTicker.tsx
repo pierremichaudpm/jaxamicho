@@ -1,22 +1,28 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useTranslation } from "@/lib/i18n";
 
 const NewsTicker: React.FC = () => {
   const { t } = useTranslation();
+  const textRef = useRef<HTMLSpanElement>(null);
+  const [duration, setDuration] = useState(15);
+
+  useEffect(() => {
+    if (textRef.current) {
+      const textWidth = textRef.current.offsetWidth;
+      const screenWidth = window.innerWidth;
+      setDuration((textWidth + screenWidth) / 80);
+    }
+  }, []);
 
   return (
     <>
       <div
         className="news-ticker-bar"
         style={{
-          textAlign: "center",
-          padding: "0.4rem 1rem",
-          fontSize: "0.7rem",
-          fontWeight: 600,
-          letterSpacing: "0.05em",
-          color: "#2dd4e0",
+          overflow: "hidden",
+          padding: "0.4rem 0",
           position: "fixed",
           top: 0,
           left: 0,
@@ -26,9 +32,26 @@ const NewsTicker: React.FC = () => {
           backdropFilter: "blur(8px)",
         }}
       >
-        {t("ticker.news")}
+        <span
+          ref={textRef}
+          style={{
+            display: "inline-block",
+            whiteSpace: "nowrap",
+            fontSize: "0.7rem",
+            fontWeight: 600,
+            letterSpacing: "0.05em",
+            color: "#2dd4e0",
+            animation: `tickerSlide ${duration}s linear infinite`,
+          }}
+        >
+          {t("ticker.news")}
+        </span>
       </div>
       <style jsx>{`
+        @keyframes tickerSlide {
+          0% { transform: translateX(100vw); }
+          100% { transform: translateX(-100%); }
+        }
         @media (max-width: 968px) {
           .news-ticker-bar {
             top: 70px !important;

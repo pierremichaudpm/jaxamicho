@@ -208,7 +208,8 @@ section {
 .hero-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: clamp(1.5rem, 3vw, 2.5rem);
+    column-gap: clamp(2.5rem, 5vw, 4rem);
+    row-gap: clamp(1.5rem, 3vw, 2.5rem);
     max-width: clamp(600px, 60vw, 900px);
     width: 100%;
 }

@@ -54,8 +54,12 @@ const NewsTicker: React.FC = () => {
         }
         @media (max-width: 968px) {
           .news-ticker-bar {
-            top: 70px !important;
+            position: fixed !important;
+            top: 54px !important;
             z-index: 1999 !important;
+            background: transparent !important;
+            backdrop-filter: none !important;
+            padding: 0.6rem 0 !important;
           }
         }
       `}</style>

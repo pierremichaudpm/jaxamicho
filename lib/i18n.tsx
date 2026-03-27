@@ -19,6 +19,9 @@ const translations: Record<Locale, Record<string, string>> = {
     "nav.partners": "Partenaires",
     "nav.contact": "Contact",
 
+    // Ticker
+    "ticker.news": "Virginie sera présente à New Images du 7 au 10 avril à Paris pour présenter le projet en développement « We are, nous sommes » de Michel Lemieux",
+
     // Hero Portfolio
     "hero.subtitle": "Productions originales",
     "hero.tagline": "Nous créons des expériences immersives, mémorables et audacieuses.",
@@ -134,6 +137,9 @@ const translations: Record<Locale, Record<string, string>> = {
     "nav.services": "Services",
     "nav.partners": "Partners",
     "nav.contact": "Contact",
+
+    // Ticker
+    "ticker.news": "News text coming soon",
 
     // Hero Portfolio
     "hero.subtitle": "Original Productions",

@@ -14,7 +14,7 @@ const LanguageToggle: React.FC = () => {
         aria-label={locale === "fr" ? "Switch to English" : "Passer en français"}
         style={{
           position: "fixed",
-          top: "calc(1.5rem - 7px)",
+          top: "calc(1.5rem + 18px)",
           right: "1.5rem",
           zIndex: 3000,
           background: "transparent",

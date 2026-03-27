@@ -28,7 +28,7 @@ const VerticalBrand: React.FC = () => {
         style={{
           position: "fixed",
           left: "2rem",
-          top: "2rem",
+          top: "2.5rem",
           bottom: "2rem",
           zIndex: 2000,
           display: "none",

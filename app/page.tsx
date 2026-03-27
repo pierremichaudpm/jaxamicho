@@ -5,6 +5,7 @@ import { I18nProvider } from "@/lib/i18n";
 import Navigation from "@/components/Navigation";
 import VerticalBrand from "@/components/VerticalBrand";
 import LanguageToggle from "@/components/LanguageToggle";
+import NewsTicker from "@/components/NewsTicker";
 import HeroPortfolio from "@/components/HeroPortfolio";
 import TeamDuo from "@/components/TeamDuo";
 import Pillars from "@/components/Pillars";
@@ -30,6 +31,7 @@ export default function Home() {
       <Navigation />
       <VerticalBrand />
       <LanguageToggle />
+      <NewsTicker />
       <div id="projets">
         <HeroPortfolio onOpenModal={openModal} />
       </div>

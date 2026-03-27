@@ -36,7 +36,7 @@ const Navigation: React.FC = () => {
           height: "70px",
           background: isOpen
             ? "rgba(3, 7, 18, 0.98)"
-            : "linear-gradient(180deg, rgba(3, 7, 18, 0.95) 0%, rgba(3, 7, 18, 0.7) 70%, rgba(3, 7, 18, 0) 100%)",
+            : "rgba(3, 7, 18, 1)",
           backdropFilter: "blur(10px)",
           zIndex: 2001,
           display: "none",

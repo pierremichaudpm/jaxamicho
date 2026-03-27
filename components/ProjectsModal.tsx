@@ -53,6 +53,7 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, scrollTo
   return (
     <>
       <div
+        className="modal-container"
         style={{
           position: "fixed",
           inset: 0,
@@ -63,10 +64,83 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, scrollTo
           paddingLeft: "120px",
         }}
       >
-        {/* Close button — top right */}
+        {/* Mobile header — identical to Navigation.tsx mobile header */}
+        <div
+          className="modal-mobile-header"
+          style={{
+            position: "sticky",
+            top: 0,
+            display: "none",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "0 1.2rem",
+            height: "70px",
+            background: "rgba(3, 7, 18, 0.95)",
+            backdropFilter: "blur(10px)",
+            zIndex: 3003,
+          }}
+        >
+          {/* Left: Close button (replaces hamburger) */}
+          <button
+            onClick={onClose}
+            style={{
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+              padding: "0.5rem",
+              flexShrink: 0,
+              color: "var(--white)",
+              fontSize: "1.5rem",
+              fontWeight: 300,
+              lineHeight: 1,
+            }}
+          >
+            ✕
+          </button>
+
+          {/* Center: Title + Logo — same as Navigation */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5rem",
+            }}
+          >
+            <a
+              href="#"
+              onClick={(e) => { e.preventDefault(); onClose(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+              style={{
+                fontSize: "1.05rem",
+                fontWeight: 900,
+                color: "var(--white)",
+                textDecoration: "none",
+                letterSpacing: "0.15rem",
+                whiteSpace: "nowrap",
+              }}
+            >
+              <span style={{ color: "#2dd4e0" }}>JAXA</span> PRODUCTION
+            </a>
+            <a href="#" onClick={(e) => { e.preventDefault(); onClose(); window.scrollTo({ top: 0, behavior: "smooth" }); }} style={{ lineHeight: 0, flexShrink: 0 }}>
+              <img
+                src="/jaxa-icon.png"
+                alt="JAXA Production"
+                style={{
+                  width: "30px",
+                  height: "30px",
+                  borderRadius: "50%",
+                }}
+              />
+            </a>
+          </div>
+
+          {/* Right: spacer to balance layout */}
+          <div style={{ width: "40px", flexShrink: 0 }} />
+        </div>
+
+        {/* Desktop close button — top right */}
         <button
           onClick={onClose}
-          className="gradient-text"
+          className="gradient-text modal-desktop-close"
           style={{
             position: "fixed",
             top: "2rem",
@@ -83,8 +157,9 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, scrollTo
           ✕
         </button>
 
-        {/* Vertical sidebar — same as main site */}
+        {/* Desktop vertical sidebar */}
         <div
+          className="modal-sidebar"
           style={{
             position: "fixed",
             left: "2rem",
@@ -161,6 +236,7 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, scrollTo
 
         {/* Centered title */}
         <h2
+          className="modal-title"
           style={{
             fontSize: "clamp(2.5rem, 5vw, 4rem)",
             fontWeight: 900,
@@ -174,6 +250,7 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, scrollTo
 
         {/* Content */}
         <div
+          className="modal-content"
           style={{
             maxWidth: "1000px",
             margin: "0 auto",
@@ -207,8 +284,9 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, scrollTo
                   e.currentTarget.style.borderColor = "rgba(255,255,255,0.06)";
                 }}
               >
-                {/* Poster — portrait, no rounded corners */}
+                {/* Poster */}
                 <div
+                  className="card-poster-wrap"
                   style={{
                     width: "260px",
                     minHeight: "370px",
@@ -235,6 +313,7 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, scrollTo
 
                 {/* Details */}
                 <div
+                  className="card-details"
                   style={{
                     flex: 1,
                     padding: "2rem",
@@ -258,9 +337,9 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, scrollTo
 
                   <h3
                     style={{
-                      fontSize: "clamp(1.5rem, 2.5vw, 2rem)",
+                      fontSize: "clamp(1.3rem, 2.5vw, 2rem)",
                       fontWeight: 900,
-                      marginBottom: "1rem",
+                      marginBottom: "0.75rem",
                       color: "var(--white)",
                     }}
                   >
@@ -269,10 +348,10 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, scrollTo
 
                   <p
                     style={{
-                      fontSize: "0.95rem",
+                      fontSize: "clamp(0.85rem, 2vw, 0.95rem)",
                       color: "var(--gray)",
                       lineHeight: 1.6,
-                      marginBottom: "1rem",
+                      marginBottom: "0.75rem",
                     }}
                   >
                     {t(project.descKey)}
@@ -285,7 +364,7 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, scrollTo
                         fontSize: "0.8rem",
                         color: "var(--gray)",
                         lineHeight: 1.5,
-                        marginBottom: "1rem",
+                        marginBottom: "0.75rem",
                         opacity: 0.8,
                         fontStyle: "italic",
                       }}
@@ -316,16 +395,16 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, scrollTo
                       style={{
                         fontSize: "0.75rem",
                         color: "var(--gray)",
-                        marginBottom: "1rem",
+                        marginBottom: "0.75rem",
                         opacity: 0.7,
                       }}
                     >
-                      🏆 {t(project.festivalsKey)}
+                      {t(project.festivalsKey)}
                     </p>
                   )}
 
                   {/* Tags */}
-                  <div style={{ display: "flex", gap: "0.6rem", marginBottom: "1.2rem", flexWrap: "wrap" }}>
+                  <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem", flexWrap: "wrap" }}>
                     <span
                       style={{
                         fontFamily: "'JetBrains Mono', monospace",
@@ -396,13 +475,38 @@ const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, scrollTo
 
         {/* Responsive */}
         <style jsx>{`
-          @media (max-width: 768px) {
+          @media (max-width: 968px) {
+            .modal-container {
+              padding-left: 0 !important;
+            }
+            .modal-sidebar {
+              display: none !important;
+            }
+            .modal-desktop-close {
+              display: none !important;
+            }
+            .modal-mobile-header {
+              display: flex !important;
+            }
+            .modal-title {
+              padding: 1.5rem 1rem 1rem !important;
+              font-size: clamp(1.8rem, 6vw, 2.5rem) !important;
+            }
+            .modal-content {
+              padding: 1rem 1rem 4rem !important;
+              gap: 2rem !important;
+            }
             .catalogue-card {
               flex-direction: column !important;
             }
-            .catalogue-card > div:first-child {
+            .card-poster-wrap {
               width: 100% !important;
-              min-height: 250px !important;
+              min-height: 0 !important;
+              aspect-ratio: 2 / 3 !important;
+              max-height: 50vh !important;
+            }
+            .card-details {
+              padding: 1.2rem !important;
             }
           }
         `}</style>

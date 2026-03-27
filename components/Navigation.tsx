@@ -96,7 +96,7 @@ const Navigation: React.FC = () => {
           <a
             href="#"
             style={{
-              fontSize: "1.3rem",
+              fontSize: "1.05rem",
               fontWeight: 900,
               color: "var(--white)",
               textDecoration: "none",

@@ -10,7 +10,6 @@ const VerticalBrand: React.FC = () => {
     { label: t("nav.projects"), href: "#projets" },
     { label: t("nav.team"), href: "#equipe" },
     { label: t("nav.services"), href: "#services" },
-    { label: t("nav.partners"), href: "#partenaires" },
     { label: t("nav.contact"), href: "#contact" },
   ];
 

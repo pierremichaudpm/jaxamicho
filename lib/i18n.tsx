@@ -20,7 +20,7 @@ const translations: Record<Locale, Record<string, string>> = {
     "nav.contact": "Contact",
 
     // Ticker
-    "ticker.news": "Virginie sera présente à New Images du 7 au 10 avril à Paris pour présenter le projet en développement « We are, nous sommes » de Michel Lemieux",
+    "ticker.news": "Virginie sera présente à New Images du 7 au 10 avril à Paris pour présenter le projet en développement « We are, nous sommes » de Michel Lemieux.",
 
     // Hero Portfolio
     "hero.subtitle": "Productions originales",
@@ -139,7 +139,7 @@ const translations: Record<Locale, Record<string, string>> = {
     "nav.contact": "Contact",
 
     // Ticker
-    "ticker.news": "News text coming soon",
+    "ticker.news": "Virginie will be at New Images from April 7 to 10 in Paris to present the project in development 'We are, nous sommes' by Michel Lemieux.",
 
     // Hero Portfolio
     "hero.subtitle": "Original Productions",

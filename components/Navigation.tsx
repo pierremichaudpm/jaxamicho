@@ -201,6 +201,7 @@ const Navigation: React.FC = () => {
         @media (max-width: 968px) {
           .mobile-header {
             display: flex !important;
+            top: 28px !important;
           }
         }
         @media (min-width: 969px) {

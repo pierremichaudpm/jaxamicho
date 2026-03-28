@@ -24,8 +24,11 @@ const NewsTicker: React.FC = () => {
           overflow: "hidden",
           padding: "0.4rem 0",
           position: "relative",
-          zIndex: 1,
-          background: "transparent",
+          zIndex: 2001,
+          background: "var(--bg-dark)",
+          marginLeft: "-120px",
+          paddingLeft: "120px",
+          width: "calc(100% + 120px)",
         }}
       >
         <span
@@ -50,7 +53,13 @@ const NewsTicker: React.FC = () => {
         }
         @media (max-width: 968px) {
           .news-ticker-bar {
-            padding: 0.6rem 0 !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            z-index: 2002 !important;
+            background: rgba(3, 7, 18, 1) !important;
+            padding: 0.4rem 0 !important;
           }
         }
       `}</style>

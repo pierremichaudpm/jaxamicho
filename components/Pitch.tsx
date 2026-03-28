@@ -130,6 +130,8 @@ const Pitch: React.FC = () => {
               background: "rgba(20, 20, 20, 0.8)",
               border: "2px solid rgba(255,255,255,0.1)",
               borderRadius: "1rem",
+              flex: "1 1 0",
+              maxWidth: "360px",
               minWidth: "260px",
               transition: "all 0.3s ease",
             }}
@@ -183,6 +185,8 @@ const Pitch: React.FC = () => {
               background: "rgba(20, 20, 20, 0.8)",
               border: "2px solid rgba(255,255,255,0.1)",
               borderRadius: "1rem",
+              flex: "1 1 0",
+              maxWidth: "360px",
               minWidth: "260px",
               transition: "all 0.3s ease",
             }}

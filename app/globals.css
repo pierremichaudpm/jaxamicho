@@ -38,7 +38,6 @@ section {
     justify-content: center;
     padding: 4rem 1.5rem;
     position: relative;
-    overflow: hidden;
 }
 
 @media (min-width: 969px) {

@@ -17,13 +17,14 @@ const Pitch: React.FC = () => {
     >
       {/* Floating shapes */}
       <div
+        className="shape-circle"
         style={{
           position: "absolute",
           width: "400px",
           height: "400px",
           borderRadius: "50%",
           background: "#e07a9e",
-          opacity: 0.09,
+          opacity: 0.15,
           left: "-10%",
           top: "50%",
           animation: "float 10s ease-in-out infinite",
@@ -31,16 +32,32 @@ const Pitch: React.FC = () => {
         }}
       />
       <div
+        className="shape-circle"
         style={{
           position: "absolute",
           width: "300px",
           height: "300px",
           borderRadius: "50%",
           background: "#2dd4e0",
-          opacity: 0.09,
+          opacity: 0.15,
           right: "-5%",
           top: "20%",
           animation: "float 12s ease-in-out infinite reverse",
+          zIndex: 1,
+        }}
+      />
+      <div
+        className="shape-circle"
+        style={{
+          position: "absolute",
+          width: "220px",
+          height: "220px",
+          borderRadius: "50%",
+          background: "#e8b84f",
+          opacity: 0.1,
+          left: "30%",
+          bottom: "10%",
+          animation: "float 15s ease-in-out infinite",
           zIndex: 1,
         }}
       />

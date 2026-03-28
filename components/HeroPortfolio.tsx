@@ -130,6 +130,37 @@ const HeroPortfolio: React.FC<HeroPortfolioProps> = ({ onOpenModal }) => {
         flexDirection: "column",
       }}
     >
+      {/* Floating shapes */}
+      <div
+        className="shape-circle"
+        style={{
+          position: "absolute",
+          width: "350px",
+          height: "350px",
+          borderRadius: "50%",
+          background: "#2dd4e0",
+          opacity: 0.12,
+          top: "10%",
+          left: "-8%",
+          animation: "float 13s ease-in-out infinite",
+          zIndex: 1,
+        }}
+      />
+      <div
+        className="shape-circle"
+        style={{
+          position: "absolute",
+          width: "280px",
+          height: "280px",
+          borderRadius: "50%",
+          background: "#e07a9e",
+          opacity: 0.1,
+          bottom: "15%",
+          right: "-5%",
+          animation: "float 10s ease-in-out infinite reverse",
+          zIndex: 1,
+        }}
+      />
       <div
         style={{
           maxWidth: "clamp(600px, 60vw, 900px)",

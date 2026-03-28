@@ -13,8 +13,40 @@ const Pillars: React.FC = () => {
         background:
           "linear-gradient(135deg, var(--bg-dark) 0%, var(--deep-blue) 100%)",
         flexDirection: "column",
+        position: "relative",
       }}
     >
+      {/* Floating shapes */}
+      <div
+        className="shape-circle"
+        style={{
+          position: "absolute",
+          width: "320px",
+          height: "320px",
+          borderRadius: "50%",
+          background: "#e8b84f",
+          opacity: 0.12,
+          right: "-8%",
+          top: "30%",
+          animation: "float 12s ease-in-out infinite",
+          zIndex: 1,
+        }}
+      />
+      <div
+        className="shape-circle"
+        style={{
+          position: "absolute",
+          width: "250px",
+          height: "250px",
+          borderRadius: "50%",
+          background: "#2dd4e0",
+          opacity: 0.1,
+          left: "-6%",
+          bottom: "20%",
+          animation: "float 9s ease-in-out infinite reverse",
+          zIndex: 1,
+        }}
+      />
       <div style={{ maxWidth: "1000px", width: "100%", margin: "0 auto" }}>
         <h2
           style={{

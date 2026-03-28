@@ -34,11 +34,12 @@ const VerticalBrand: React.FC = () => {
           flexDirection: "column",
           alignItems: "center",
           gap: "clamp(0.3rem, 0.8vh, 1rem)",
-          overflow: "hidden",
+          background: "transparent",
+          pointerEvents: "none",
         }}
       >
         {/* Logo */}
-        <a href="#" style={{ lineHeight: 0, flexShrink: 0 }}>
+        <a href="#" style={{ lineHeight: 0, flexShrink: 0, pointerEvents: "auto" }}>
           <img
             src="/jaxa-icon.png"
             alt="JAXA Production"
@@ -65,6 +66,7 @@ const VerticalBrand: React.FC = () => {
             flexShrink: 1,
             minHeight: 0,
             overflow: "hidden",
+            pointerEvents: "auto",
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.color = "#2dd4e0";
@@ -86,6 +88,7 @@ const VerticalBrand: React.FC = () => {
             flexDirection: "column",
             alignItems: "center",
             gap: "clamp(0.4rem, 1.2vh, 2rem)",
+            pointerEvents: "auto",
           }}
         >
           {menuItems.map((item) => (

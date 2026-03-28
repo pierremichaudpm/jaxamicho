@@ -21,13 +21,14 @@ const TeamDuo: React.FC = () => {
     >
       {/* Floating shapes */}
       <div
+        className="shape-circle"
         style={{
           position: "absolute",
           width: "300px",
           height: "300px",
           borderRadius: "50%",
           background: "#e8b84f",
-          opacity: 0.09,
+          opacity: 0.15,
           top: "5%",
           left: "60%",
           animation: "float 11s ease-in-out infinite",
@@ -35,16 +36,32 @@ const TeamDuo: React.FC = () => {
         }}
       />
       <div
+        className="shape-circle"
         style={{
           position: "absolute",
           width: "250px",
           height: "250px",
           borderRadius: "50%",
           background: "#2dd4e0",
-          opacity: 0.09,
+          opacity: 0.15,
           bottom: "15%",
           right: "70%",
           animation: "float 9s ease-in-out infinite reverse",
+          zIndex: 1,
+        }}
+      />
+      <div
+        className="shape-circle"
+        style={{
+          position: "absolute",
+          width: "200px",
+          height: "200px",
+          borderRadius: "50%",
+          background: "#e07a9e",
+          opacity: 0.1,
+          top: "40%",
+          left: "-5%",
+          animation: "float 14s ease-in-out infinite",
           zIndex: 1,
         }}
       />

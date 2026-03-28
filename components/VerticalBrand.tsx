@@ -34,7 +34,8 @@ const VerticalBrand: React.FC = () => {
           display: "none",
           flexDirection: "column",
           alignItems: "center",
-          gap: "clamp(0.5rem, 1vh, 1rem)",
+          gap: "clamp(0.3rem, 0.8vh, 1rem)",
+          overflow: "hidden",
         }}
       >
         {/* Logo */}
@@ -55,14 +56,16 @@ const VerticalBrand: React.FC = () => {
           href="#"
           style={{
             transform: "rotate(180deg)",
-            fontSize: "clamp(1.8rem, 3vh, 2.5rem)",
+            fontSize: "clamp(1.4rem, 2.5vh, 2.5rem)",
             fontWeight: 900,
             color: "var(--white)",
             textDecoration: "none",
             writingMode: "vertical-rl",
-            letterSpacing: "clamp(0.15rem, 0.3vh, 0.3rem)",
+            letterSpacing: "clamp(0.1rem, 0.2vh, 0.3rem)",
             transition: "color 0.3s ease",
-            flexShrink: 0,
+            flexShrink: 1,
+            minHeight: 0,
+            overflow: "hidden",
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.color = "#2dd4e0";
@@ -75,7 +78,7 @@ const VerticalBrand: React.FC = () => {
         </a>
 
         {/* Spacer */}
-        <div style={{ flex: "0 0 clamp(0.5rem, 2vh, 2rem)" }} />
+        <div style={{ flex: "0 0 clamp(0.2rem, 1vh, 1.5rem)" }} />
 
         {/* Desktop Nav */}
         <nav
@@ -83,7 +86,7 @@ const VerticalBrand: React.FC = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "clamp(0.6rem, 1.5vh, 2rem)",
+            gap: "clamp(0.4rem, 1.2vh, 2rem)",
           }}
         >
           {menuItems.map((item) => (
@@ -118,6 +121,34 @@ const VerticalBrand: React.FC = () => {
               {item.label}
             </a>
           ))}
+          {/* Studio Micho — external link */}
+          <a
+            href="https://studiomicho.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "var(--white)",
+              textDecoration: "none",
+              fontSize: "clamp(0.55rem, 0.8vw, 0.8rem)",
+              fontWeight: 600,
+              letterSpacing: "clamp(0.1rem, 0.2vw, 0.2rem)",
+              transition: "all 0.3s ease",
+              textTransform: "lowercase",
+              opacity: 0.7,
+              writingMode: "vertical-rl",
+              transform: "rotate(180deg)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = "#2dd4e0";
+              e.currentTarget.style.opacity = "1";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = "var(--white)";
+              e.currentTarget.style.opacity = "0.5";
+            }}
+          >
+            studio micho
+          </a>
         </nav>
       </div>
       <style jsx>{`

@@ -194,6 +194,31 @@ const Navigation: React.FC = () => {
             {item.label}
           </a>
         ))}
+        {/* Studio Micho — external link */}
+        <a
+          href="https://studiomicho.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "var(--white)",
+            textDecoration: "none",
+            fontSize: "2rem",
+            fontWeight: 400,
+            letterSpacing: "1px",
+            transition: "all 0.3s ease",
+            textTransform: "lowercase",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.color = "#2dd4e0";
+            e.currentTarget.style.transform = "translateX(-10px)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = "var(--white)";
+            e.currentTarget.style.transform = "translateX(0)";
+          }}
+        >
+          studio micho
+        </a>
       </div>
 
       {/* Responsive Styles */}

@@ -60,6 +60,8 @@ const NewsTicker: React.FC = () => {
             z-index: 2002 !important;
             background: rgba(3, 7, 18, 1) !important;
             padding: 0.4rem 0 !important;
+            margin-left: 0 !important;
+            padding-left: 0 !important;
           }
         }
       `}</style>

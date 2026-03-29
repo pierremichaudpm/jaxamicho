@@ -27,6 +27,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, category, color, image,
         const wrapper = e.currentTarget.querySelector(".card-image") as HTMLElement;
         if (wrapper) {
           wrapper.style.transform = "translateY(-5px)";
+          wrapper.style.boxShadow = `0 8px 30px rgba(0, 0, 0, 0.6), 0 0 40px ${color}33`;
+          wrapper.style.borderColor = `${color}44`;
         }
         const poster = e.currentTarget.querySelector(".card-poster") as HTMLElement;
         if (poster) poster.style.filter = "grayscale(0)";
@@ -37,6 +39,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, category, color, image,
         const wrapper = e.currentTarget.querySelector(".card-image") as HTMLElement;
         if (wrapper) {
           wrapper.style.transform = "translateY(0)";
+          wrapper.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(45, 212, 224, 0.08)";
+          wrapper.style.borderColor = "rgba(255, 255, 255, 0.15)";
         }
         const poster = e.currentTarget.querySelector(".card-poster") as HTMLElement;
         if (poster) poster.style.filter = "grayscale(1)";
@@ -53,8 +57,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, category, color, image,
           borderRadius: "0.5rem",
           aspectRatio: "2 / 3",
           background: "#000",
-          transition: "transform 0.4s ease",
+          transition: "transform 0.4s ease, box-shadow 0.4s ease",
           marginBottom: "0.5rem",
+          border: "1px solid rgba(255, 255, 255, 0.15)",
+          boxShadow: "0 4px 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(45, 212, 224, 0.08)",
         }}
       >
         {image && (
@@ -125,7 +131,7 @@ const HeroPortfolio: React.FC<HeroPortfolioProps> = ({ onOpenModal }) => {
       className="hero"
       style={{
         background:
-          "linear-gradient(135deg, var(--bg-dark) 0%, var(--deep-blue) 100%)",
+          "linear-gradient(135deg, #0a1628 0%, #0f1f3a 100%)",
         position: "relative",
         flexDirection: "column",
       }}
